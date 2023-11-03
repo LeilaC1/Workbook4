@@ -71,11 +71,23 @@ let vehicles = [
         console.log("Red vehicles: " + vehicles[i].type);
     }
 }
-   // Which vehicles have registrations that are expired?
+   // Which vehicles have registrations that are expired?   
+        const today = new Date();
    for (let i = 0; i < vehicles.length; i++){
-  //  if(vehicles[i].registrationExpires <= ("01-01-2023")){
+  if (vehicles[i].registrationExpires < today){
         console.log("Expired registration vehicles: " + vehicles[i].type);
     }
-//}
+}
    // Which vehicles that hold at least 6 people?
+
+   for (let i = 0; i < vehicles.length; i++){
+    if (vehicles[i].capacity >= 6){
+        console.log("Vehicles with atleast 6 capacity: " + vehicles[i].type);
+    }}
+
    // Which vehicles have license plates that end with "222"?
+
+   for (let i = 0; i < vehicles.length; i++){
+    if (vehicles[i].licenseNo.endsWith("222")){
+        console.log("Vehicles with  license plates that end with 222: " + vehicles[i].type);
+    }}
